@@ -54,9 +54,9 @@ a {
 
 header {
   width: 100%;
-  height: 7.8rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#374d6550), to(transparent));
-  background-image: linear-gradient(to bottom, #374d6550, transparent);
+  height: 100vh;
+  background: #020024;
+  background: linear-gradient(170deg, rgba(2, 0, 36, 0.316311) 0%, rgba(55, 77, 101, 0.228356) 35%, transparent 100%);
   position: absolute;
   top: 0;
   z-index: 5;
@@ -75,8 +75,8 @@ header nav {
 }
 
 header nav .logo {
-  width: 17rem;
-  height: 15rem;
+  width: 22rem;
+  height: 17rem;
   display: block;
   cursor: pointer;
   background-image: url("../assets/neopolitan-sign.svg");
@@ -106,19 +106,19 @@ header nav .nav-wrapper {
 
 header nav .nav-wrapper li a {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.2rem;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 header nav .nav-wrapper li a:hover {
-  color: #7f9aad;
+  color: #374d65;
 }
 
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: url("../assets/oven3.jpeg");
+  background-image: url("../assets/s.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -202,15 +202,15 @@ header nav .nav-wrapper li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #374d6550;
   padding: 5rem 2rem;
-  height: 45vh;
+  height: 70vh;
   max-width: 40%;
   color: #3f4a4e;
 }
@@ -225,74 +225,6 @@ header nav .nav-wrapper li a:hover {
   margin-top: 2rem;
   font-size: 2.8rem;
   text-align: right;
-}
-
-.about .facts {
-  width: 100%;
-  height: 30rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.about .facts .fc {
-  width: 20%;
-  height: 20vh;
-  margin-top: 6rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-.about .facts .fc-overlay {
-  width: 100%;
-  height: 100%;
-  background-color: #ecf0f3ce;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #000;
-  font-weight: 700;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  opacity: 0;
-}
-
-.about .facts .fc-overlay .fc-o-cont {
-  font-size: 2.4rem;
-  text-align: right;
-  width: 80%;
-}
-
-.about .facts .fc-overlay:hover {
-  opacity: 1;
-}
-
-.about .facts .fc1 {
-  background-image: url("../assets/oven.jpeg");
-}
-
-.about .facts .fc2 {
-  background-image: url("../assets/oven2.jpeg");
-}
-
-.about .facts .fc3 {
-  background-image: url("../assets/rest.jpeg");
-}
-
-.about .facts .fc4 {
-  background-image: url("../assets/oven3.jpeg");
 }
 
 .menu {
@@ -311,6 +243,7 @@ header nav .nav-wrapper li a:hover {
   background-image: url("../assets/bg-svg.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  border: 2rem #8899ab solid;
 }
 
 .menu .bgr-overlay {
@@ -327,9 +260,9 @@ header nav .nav-wrapper li a:hover {
 }
 
 .menu .menu-content {
-  width: 40%;
+  width: 38%;
   min-width: 50rem;
-  height: 95vh;
+  height: 90vh;
   background-color: #fff;
   text-align: center;
   position: relative;

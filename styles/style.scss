@@ -64,12 +64,15 @@ a {
 
 header {
 	width: 100%;
-	height: 7.8rem;
+	height: 100vh;
 	//background-color: $neoBlue;
-	background-image: linear-gradient(
-		to bottom,
-		$neoBlueTransparent,
-		transparent
+	//background-image: linear-gradient(to bottom, $neoBlue, transparent);
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		170deg,
+		rgba(2, 0, 36, 0.3163109188988095) 0%,
+		rgba(55, 77, 101, 0.2283557368259804) 35%,
+		transparent 100%
 	);
 	position: absolute;
 	top: 0;
@@ -79,8 +82,8 @@ header {
 		justify-content: space-between;
 		align-items: center;
 		.logo {
-			width: 17rem;
-			height: 15rem;
+			width: 22rem;
+			height: 17rem;
 			display: block;
 			cursor: pointer;
 			background-image: url('../assets/neopolitan-sign.svg');
@@ -100,10 +103,10 @@ header {
 			li {
 				a {
 					color: #fff;
-					font-size: 2rem;
+					font-size: 2.2rem;
 					transition: all 0.4s ease-in-out;
 					&:hover {
-						color: $neoBlueLight;
+						color: $neoBlue;
 					}
 				}
 			}
@@ -114,7 +117,7 @@ header {
 .hero {
 	width: 100%;
 	height: 100vh;
-	background-image: url('../assets/oven3.jpeg');
+	background-image: url('../assets/s.jpeg');
 	//background-color: $neoBlue;
 	background-position: center;
 	background-size: cover;
@@ -180,11 +183,11 @@ header {
 	.about-content {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		background-color: $neoBlueTransparent;
 		padding: 5rem 2rem;
-		height: 45vh;
+		height: 70vh;
 		max-width: 40%;
 		color: $ash;
 		h4 {
@@ -202,54 +205,6 @@ header {
 			// text-align: right;
 		}
 	}
-	.facts {
-		width: 100%;
-		height: 30rem;
-		display: flex;
-		justify-content: space-evenly;
-		.fc {
-			width: 20%;
-			height: 20vh;
-			//background-color: $neoBlue;
-			margin-top: 6rem;
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-		}
-		.fc-overlay {
-			width: 100%;
-			height: 100%;
-			background-color: $whiteoverlay;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: #000;
-			font-weight: 700;
-			transition: all 0.4s ease-in-out;
-			opacity: 0;
-			.fc-o-cont {
-				font-size: 2.4rem;
-				text-align: right;
-				width: 80%;
-			}
-			&:hover {
-				opacity: 1;
-			}
-		}
-		.fc1 {
-			background-image: url('../assets/oven.jpeg');
-		}
-		.fc2 {
-			background-image: url('../assets/oven2.jpeg');
-		}
-		.fc3 {
-			background-image: url('../assets/rest.jpeg');
-		}
-		.fc4 {
-			background-image: url('../assets/oven3.jpeg');
-		}
-	}
 }
 
 .menu {
@@ -261,8 +216,10 @@ header {
 	overflow: hidden;
 	//	background-image: url('../assets/bgr-unstroke.png');
 	background-image: url('../assets/bg-svg.svg');
+
 	background-size: cover;
 	background-repeat: no-repeat;
+	border: 2rem #8899ab solid;
 	.bgr-overlay {
 		background-image: url('../assets/bgr-stroke.png');
 		background-size: cover;
@@ -276,9 +233,9 @@ header {
 		opacity: 0.08;
 	}
 	.menu-content {
-		width: 40%;
+		width: 38%;
 		min-width: 50rem;
-		height: 95vh;
+		height: 90vh;
 		background-color: #fff;
 		text-align: center;
 		position: relative;
