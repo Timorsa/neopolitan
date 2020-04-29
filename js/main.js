@@ -94,3 +94,10 @@ sr.reveal('.animate-bottom', {
 	distance: '25rem',
 	delay: 600,
 });
+
+sr.reveal('.animate-bottom-delay', {
+	origin: 'bottom',
+	duration: 1000,
+	distance: '3rem',
+	delay: 900,
+});

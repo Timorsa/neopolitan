@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cousine|Heebo&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Alef&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap");
 * {
   margin: 0;
@@ -11,7 +11,7 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  font-family: "Heebo", sans-serif;
+  font-family: "Alef", sans-serif;
 }
 
 body {
@@ -92,10 +92,6 @@ header nav .nav-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -138,7 +134,7 @@ header nav .nav-wrapper li a:hover {
       -ms-flex-align: center;
           align-items: center;
   font-size: 5.8rem;
-  color: #fff;
+  color: #374d65;
 }
 
 .info {
@@ -211,7 +207,7 @@ header nav .nav-wrapper li a:hover {
   background-color: #374d6550;
   padding: 5rem 2rem;
   height: 70vh;
-  max-width: 40%;
+  max-width: 45%;
   color: #3f4a4e;
 }
 
@@ -225,6 +221,22 @@ header nav .nav-wrapper li a:hover {
   margin-top: 2rem;
   font-size: 2.8rem;
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+
+.about .about-content p span {
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
 .menu {
@@ -398,6 +410,10 @@ header nav .nav-wrapper li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -466,16 +482,11 @@ header nav .nav-wrapper li a:hover {
 }
 
 .contact .social {
-  text-align: right;
   width: 80%;
   justify-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
