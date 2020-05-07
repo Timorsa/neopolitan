@@ -20,9 +20,15 @@ $font2: 'Heebo', sans-serif;
 }
 
 html {
-	font-size: 10px;
+	font-size: 8px;
 	scroll-behavior: smooth;
 	font-family: $font1;
+}
+
+@media (min-width: 1920px) {
+	html {
+		font-size: 10px;
+	}
 }
 
 body {
