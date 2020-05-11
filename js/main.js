@@ -1,6 +1,6 @@
 gsap.to('.overlay', 2, {
 	delay: 1,
-	top: '-100%',
+	top: '-200%',
 	ease: 'Expo.easeInOut',
 });
 gsap.from('.nav-wrapper li', 0.5, {
@@ -50,19 +50,19 @@ $(document).ready(function () {
 	});
 });
 
-$(document).ready(function () {
-	$('#lightSlider').lightSlider();
-});
-//
-$(document).ready(function () {
-	$('#autoWidth').lightSlider({
-		autoWidth: true,
-		loop: true,
-		onSliderLoad: function () {
-			$('#autoWidth').removeClass('cS-hidden');
-		},
-	});
-});
+// $(document).ready(function () {
+// 	$('#lightSlider').lightSlider();
+// });
+// //
+// $(document).ready(function () {
+// 	$('#autoWidth').lightSlider({
+// 		autoWidth: true,
+// 		loop: true,
+// 		onSliderLoad: function () {
+// 			$('#autoWidth').removeClass('cS-hidden');
+// 		},
+// 	});
+// });
 
 // scroll reveal
 window.sr = ScrollReveal();
