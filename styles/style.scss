@@ -22,6 +22,7 @@ $font2: 'Heebo', sans-serif;
 html {
 	font-size: 8px;
 	scroll-behavior: smooth;
+
 	font-family: $font1;
 }
 
@@ -350,6 +351,9 @@ header {
 						top: 0.5rem;
 						color: $ash;
 					}
+					.addons-price {
+						display: none;
+					}
 					.menu-item-description {
 						width: 100%;
 						position: relative;
@@ -554,25 +558,50 @@ header {
 }
 
 .gallery {
-	height: 40vh;
-	width: 100%;
-	background-color: $neoBlue;
-	#lightslider {
-		height: 40vh;
+	#lightsail {
 	}
 	li {
-		max-width: 100%;
-		height: 38vh;
 		img {
-			width: 100%;
-			height: 37vh;
-			//for media query v
-			// min-height: 50vh;
-			// width: 100vw;
-			object-fit: cover;
+			object-fit: contain;
 		}
 	}
 }
+
+#myCarousel {
+	height: 50vh;
+	.item {
+		// max-height: 50vh;
+		width: 100%;
+
+		img {
+			width: 50%;
+			height: 50%;
+			object-fit: cover;
+			object-position: bottom;
+			float: left;
+		}
+	}
+}
+// .gallery {
+// 	height: 40vh;
+// 	width: 100%;
+// 	background-color: $neoBlue;
+// 	#lightslider {
+// 		height: 40vh;
+// 	}
+// 	li {
+// 		max-width: 100%;
+// 		height: 38vh;
+// 		img {
+// 			width: 100%;
+// 			height: 37vh;
+// 			//for media query v
+// 			// min-height: 50vh;
+// 			// width: 100vw;
+// 			object-fit: cover;
+// 		}
+// 	}
+// }
 
 // progress wrap
 
@@ -626,71 +655,200 @@ footer {
 	background-color: #000;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1050px) {
+	html {
+		max-width: 600px;
+		overflow-x: hidden;
+	}
+	.overlay {
+		.overlay-logo {
+			width: 200px;
+			height: 150px;
+		}
+	}
 	header {
 		width: 100%;
-		height: 12rem;
+		// height: 12rem;
 		//background-color: $neoBlue;
 		nav {
-			flex-direction: column;
+			flex-direction: column-reverse;
+			justify-content: space-around;
+			width: 100%;
 			.logo {
 				width: 20rem;
 				height: 17rem;
 			}
 			.nav-wrapper {
-				height: 100%;
-				width: 100%;
+				display: none;
 			}
 		}
 	}
 	.about {
 		min-height: 120vh;
 		align-items: flex-start;
+		// padding: 1rem;
 		.container {
-			//display: block;
+			width: 100%;
 		}
 		.img {
 			width: 100%;
-			height: 20vh;
-			min-height: 20vh;
+			height: 30vh;
+			min-height: 25vh;
 		}
 		.about-content {
+			margin-top: 5rem;
+			padding-top: 5rem;
 			width: 100%;
 			min-width: 100%;
-		}
-		.facts {
-			flex-wrap: wrap;
-			.fc {
-				width: 45%;
+			min-height: 85vh;
+			display: block;
+			min-width: 100%;
+			h4 {
+				margin: 0;
+				padding: 0;
+				font-size: 3.5rem;
+				text-align: center;
+			}
+			p {
+				display: block;
+				font-size: 2.5rem;
 			}
 		}
 	}
 
 	.menu {
+		height: 120vh;
 		.menu-content {
 			width: 90%;
 			min-width: 10rem;
-
-			.menu-item-description {
-				width: 70%;
+			height: 120vh;
+			padding-top: 2rem;
+			.menu-logo {
+				width: 13.5rem;
+				height: 3rem;
+				margin-top: 1.4rem;
 			}
+			.line {
+				width: 14.5rem;
+				height: 0.2rem;
+			}
+			p {
+				font-size: 1.4rem;
+				margin-top: 1.5rem;
+			}
+			.menu-banner {
+				font-size: 2.5rem;
+				// margin: 1.5rem;
+			}
+			.menu-list {
+				ul {
+					li {
+						.addons {
+							display: none;
+						}
+
+						.addons-price {
+							display: block;
+							opacity: 1;
+							position: static;
+							width: 100%;
+							text-align: center;
+							font-family: 'Merriweather Sans', sans-serif;
+							font-weight: 700;
+							font-style: italic;
+							font-size: 1.5rem;
+							color: $ash;
+						}
+					}
+				}
+			}
+			// .menu-item-description {
+			// 	width: 70%;
+			// }
 		}
 	}
 
 	.contact {
 		.container {
 			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+			width: 100vw;
 			.map {
 				width: 100%;
+				margin: 0;
+				iframe {
+					height: 350;
+				}
+			}
+			.contact-pic {
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				min-height: 30rem;
 			}
 			.image-cont {
+				margin: 0;
 				width: 100%;
 				.social {
 					width: 100%;
 					margin-top: 1rem;
 					//margin-right: 2.2rem;
+					font-size: 2rem;
+					.headline {
+						font-size: 2rem;
+					}
+					a {
+						margin: 0 1rem;
+						font-size: 2rem;
+					}
+					i {
+						font-size: 2.5;
+						margin: 0 1rem;
+					}
 				}
 			}
+		}
+	}
+	.progress-wrap {
+		display: none;
+	}
+	.banner {
+		height: 10vh;
+		min-height: 7rem;
+		font-size: 3.2rem;
+	}
+
+	#myCarousel {
+		height: 50vh;
+		.item {
+			height: 50vh;
+			width: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: bottom;
+				// float: left;
+			}
+			img:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-height: 650px) {
+	.about {
+		min-height: 150vh;
+		.about-content {
+			min-height: 110vh;
+		}
+	}
+	.menu {
+		.menu-content {
+			height: 180vh;
 		}
 	}
 }

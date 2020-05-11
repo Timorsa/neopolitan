@@ -403,6 +403,10 @@ header nav .nav-wrapper li a:hover {
   color: #3f4a4e;
 }
 
+.menu .menu-content .menu-list ul li .addons-price {
+  display: none;
+}
+
 .menu .menu-content .menu-list ul li .menu-item-description {
   width: 100%;
   position: relative;
@@ -728,26 +732,27 @@ header nav .nav-wrapper li a:hover {
   }
 }
 
-.gallery {
-  height: 40vh;
-  width: 100%;
-  background-color: #374d65;
-}
-
-.gallery #lightslider {
-  height: 40vh;
-}
-
-.gallery li {
-  max-width: 100%;
-  height: 38vh;
-}
-
 .gallery li img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#myCarousel {
+  height: 50vh;
+}
+
+#myCarousel .item {
   width: 100%;
-  height: 37vh;
+}
+
+#myCarousel .item img {
+  width: 50%;
+  height: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+  float: left;
 }
 
 .progress-wrap {
@@ -807,24 +812,33 @@ footer {
   background-color: #000;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1050px) {
+  html {
+    max-width: 600px;
+    overflow-x: hidden;
+  }
+  .overlay .overlay-logo {
+    width: 200px;
+    height: 150px;
+  }
   header {
     width: 100%;
-    height: 12rem;
   }
   header nav {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
   }
   header nav .logo {
     width: 20rem;
     height: 17rem;
   }
   header nav .nav-wrapper {
-    height: 100%;
-    width: 100%;
+    display: none;
   }
   .about {
     min-height: 120vh;
@@ -832,44 +846,156 @@ footer {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .about .container {
+    width: 100%;
+  }
   .about .img {
     width: 100%;
-    height: 20vh;
-    min-height: 20vh;
+    height: 30vh;
+    min-height: 25vh;
   }
   .about .about-content {
+    margin-top: 5rem;
+    padding-top: 5rem;
     width: 100%;
     min-width: 100%;
+    min-height: 85vh;
+    display: block;
+    min-width: 100%;
   }
-  .about .facts {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .about .about-content h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 3.5rem;
+    text-align: center;
   }
-  .about .facts .fc {
-    width: 45%;
+  .about .about-content p {
+    display: block;
+    font-size: 2.5rem;
+  }
+  .menu {
+    height: 120vh;
   }
   .menu .menu-content {
     width: 90%;
     min-width: 10rem;
+    height: 120vh;
+    padding-top: 2rem;
   }
-  .menu .menu-content .menu-item-description {
-    width: 70%;
+  .menu .menu-content .menu-logo {
+    width: 13.5rem;
+    height: 3rem;
+    margin-top: 1.4rem;
+  }
+  .menu .menu-content .line {
+    width: 14.5rem;
+    height: 0.2rem;
+  }
+  .menu .menu-content p {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+  }
+  .menu .menu-content .menu-banner {
+    font-size: 2.5rem;
+  }
+  .menu .menu-content .menu-list ul li .addons {
+    display: none;
+  }
+  .menu .menu-content .menu-list ul li .addons-price {
+    display: block;
+    opacity: 1;
+    position: static;
+    width: 100%;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #3f4a4e;
   }
   .contact .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
   }
   .contact .container .map {
     width: 100%;
+    margin: 0;
+  }
+  .contact .container .map iframe {
+    height: 350;
+  }
+  .contact .container .contact-pic {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 30rem;
   }
   .contact .container .image-cont {
+    margin: 0;
     width: 100%;
   }
   .contact .container .image-cont .social {
     width: 100%;
     margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .contact .container .image-cont .social .headline {
+    font-size: 2rem;
+  }
+  .contact .container .image-cont .social a {
+    margin: 0 1rem;
+    font-size: 2rem;
+  }
+  .contact .container .image-cont .social i {
+    font-size: 2.5;
+    margin: 0 1rem;
+  }
+  .progress-wrap {
+    display: none;
+  }
+  .banner {
+    height: 10vh;
+    min-height: 7rem;
+    font-size: 3.2rem;
+  }
+  #myCarousel {
+    height: 50vh;
+  }
+  #myCarousel .item {
+    height: 50vh;
+    width: 100%;
+  }
+  #myCarousel .item img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+  #myCarousel .item img:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-height: 650px) {
+  .about {
+    min-height: 150vh;
+  }
+  .about .about-content {
+    min-height: 110vh;
+  }
+  .menu .menu-content {
+    height: 180vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
