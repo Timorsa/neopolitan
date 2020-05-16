@@ -5,6 +5,9 @@ $neoBlueLight: #7f9aad;
 $smokey: #ecf0f3;
 $ash: #3f4a4e;
 $whiteoverlay: #ecf0f3ce;
+$color: #000; // icon color
+$animation: 0.6s; // animation speed
+$scale: 1; // icon scale 68/68 default
 
 @import url('https://fonts.googleapis.com/css?family=Alef&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
@@ -98,6 +101,12 @@ header {
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
+		.mobile-burger {
+			display: none;
+		}
+		.mobile-nav {
+			display: none;
+		}
 		.nav-wrapper {
 			height: 100%;
 			width: 30%;
@@ -124,7 +133,6 @@ header {
 	width: 100%;
 	height: 100vh;
 	background-image: url('../assets/s.jpeg');
-	//background-color: $neoBlue;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -142,21 +150,13 @@ header {
 }
 
 .info {
-	// background-image: url('../assets/bgr-stroke.png');
 	background-color: $smokey;
-	// 	background-repeat: no-repeat;
-	// 	background-size: contain;
-	// 	background-position: center;
-	//
 }
 
 .about {
 	width: 100%;
 	min-height: 100vh;
-	//min-height: 70rem;
 	padding: 2.5rem;
-	//background-color: $neoBlueTransparent;
-	//background-image: url('../assets/some.jpg');
 	background-size: cover;
 	background-position: center;
 	color: $neoBlue;
@@ -174,7 +174,6 @@ header {
 	aside {
 		height: 80%;
 		width: 80%;
-		//order: 1px solid black;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 	}
 	.img {
@@ -193,7 +192,7 @@ header {
 		align-items: center;
 		background-color: $neoBlueTransparent;
 		padding: 5rem 2rem;
-		height: 70vh;
+		min-height: 70vh;
 		max-width: 45%;
 		color: $ash;
 		h4 {
@@ -209,11 +208,6 @@ header {
 			flex-direction: column;
 			justify-content: space-around;
 			height: 100%;
-
-			// width: 50%;
-			// margin: 0 auto;
-			//padding: 2rem;
-			// text-align: right;
 			span {
 				width: 100%;
 				display: block;
@@ -224,13 +218,12 @@ header {
 }
 
 .menu {
-	height: 100vh;
+	min-height: 100vh;
 	background-color: $neoBlueLight;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	//	background-image: url('../assets/bgr-unstroke.png');
 	background-image: url('../assets/bg-svg.png');
 
 	background-size: cover;
@@ -242,7 +235,7 @@ header {
 		background-repeat: no-repeat;
 		background-position: left;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 		position: absolute;
 		bottom: 0;
 		z-index: 2;
@@ -251,7 +244,7 @@ header {
 	.menu-content {
 		width: 38%;
 		min-width: 50rem;
-		height: 90vh;
+		min-height: 90vh;
 		background-color: #fff;
 		text-align: center;
 		position: relative;
@@ -263,7 +256,6 @@ header {
 			background-size: cover;
 			background-repeat: no-repeat;
 			margin: 2.5rem auto 0.5rem;
-			// border-bottom: 0.5rem solid #000;
 		}
 		.line {
 			width: 28rem;
@@ -310,7 +302,6 @@ header {
 					.bc {
 						width: 1.4rem;
 						height: 1.4rem;
-						//border-radius: 1.6rem;
 						background-color: #000;
 						transform: rotate(45deg);
 						opacity: 0.1;
@@ -319,7 +310,6 @@ header {
 					.sc {
 						width: 1.2rem;
 						height: 1.2rem;
-						//border-radius: 1.2rem;
 						transform: rotate(45deg);
 						background-color: #000;
 						opacity: 0.05;
@@ -331,8 +321,6 @@ header {
 					margin: 0 2rem;
 				}
 				li {
-					// display: flex;
-					// flex-wrap: wrap;
 					position: relative;
 					margin-top: 1.5rem;
 					.menu-item-name {
@@ -367,7 +355,6 @@ header {
 }
 
 .contact {
-	//height: 50vh;
 	width: 100%;
 	background-color: $neoBlue;
 	display: flex;
@@ -377,19 +364,16 @@ header {
 	.container {
 		display: flex;
 		justify-content: space-around;
-		//align-items: center;
 		flex-wrap: wrap;
 	}
 	.map {
 		margin: 2rem;
 		padding: 2rem;
 		background-color: $smokey;
-		//	border-radius: 2.5rem;
 		width: 40%;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
 		iframe {
-			//border-radius: 0rem;
 			width: 100%;
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 		}
@@ -398,7 +382,6 @@ header {
 		margin: 2rem;
 		padding: 2rem;
 		background-color: $smokey;
-		//border-radius: 2.5rem;
 		width: 40%;
 		display: flex;
 		justify-content: center;
@@ -415,7 +398,6 @@ header {
 		margin: 2rem;
 		margin-bottom: 0;
 		padding: 2rem;
-		//border-radius: 2.5rem;
 	}
 	.address {
 		color: $ash;
@@ -561,7 +543,6 @@ header {
 	height: 67vh;
 	background-color: $neoBlueLight;
 	.item {
-		// max-height: 50vh;
 		width: 100%;
 
 		img {
@@ -573,28 +554,6 @@ header {
 		}
 	}
 }
-// .gallery {
-// 	height: 40vh;
-// 	width: 100%;
-// 	background-color: $neoBlue;
-// 	#lightslider {
-// 		height: 40vh;
-// 	}
-// 	li {
-// 		max-width: 100%;
-// 		height: 38vh;
-// 		img {
-// 			width: 100%;
-// 			height: 37vh;
-// 			//for media query v
-// 			// min-height: 50vh;
-// 			// width: 100vw;
-// 			object-fit: cover;
-// 		}
-// 	}
-// }
-
-// progress wrap
 
 .progress-wrap {
 	position: fixed;
@@ -671,12 +630,402 @@ footer {
 			.nav-wrapper {
 				display: none;
 			}
+
+			.mobile-burger {
+				display: block;
+				background-color: $whiteoverlay;
+				transform: scale(0.55);
+				position: absolute;
+				right: 1rem;
+				top: 4rem;
+				z-index: 7;
+				border-radius: 50%;
+				.hamburglar {
+					transform: scale($scale);
+					// margin:  auto;
+					position: relative;
+					display: block;
+					width: 68px;
+					height: 68px;
+					-webkit-touch-callout: none;
+					user-select: none;
+				}
+
+				// transition mask
+				.path-burger {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 68px;
+					width: 68px;
+					// two masks because... browser support.
+					mask: url(#mask);
+					-webkit-mask-box-image: url(https://raygun.io/upload/mask.svg);
+				}
+
+				.animate-path {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 68px;
+					height: 68px;
+				}
+
+				// what this does is create a small square that I then rotate behind an svg mask, giving the apparence of the line animating
+				.path-rotation {
+					height: 34px;
+					width: 34px;
+					margin: 34px 34px 0 0;
+					transform: rotate(0deg);
+					transform-origin: 100% 0;
+					&:before {
+						content: '';
+						display: block;
+						width: 30px;
+						height: 34px;
+						margin: 0 4px 0 0;
+						background: $color;
+					}
+				}
+
+				// box rotation animation
+				@keyframes rotate-out {
+					0% {
+						transform: rotate(0deg);
+					}
+					40% {
+						transform: rotate(180deg);
+					}
+					100% {
+						transform: rotate(360deg);
+					}
+				}
+
+				@keyframes rotate-in {
+					0% {
+						transform: rotate(360deg);
+					}
+					40% {
+						transform: rotate(180deg);
+					}
+					100% {
+						transform: rotate(0deg);
+					}
+				}
+
+				// offset moves
+				// dasharray is the dash size
+				// need to be able to control dash space size.
+
+				.hamburglar.is-open {
+					.path {
+						animation: dash-in $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+					.animate-path {
+						animation: rotate-in $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+				}
+
+				.hamburglar.is-closed {
+					.path {
+						animation: dash-out $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+					.animate-path {
+						animation: rotate-out $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+				}
+
+				.path {
+					stroke-dasharray: 240;
+					stroke-dashoffset: 240;
+					stroke-linejoin: round;
+				}
+
+				@keyframes dash-in {
+					0% {
+						stroke-dashoffset: 240;
+					}
+					40% {
+						stroke-dashoffset: 240;
+					}
+					100% {
+						stroke-dashoffset: 0;
+					}
+				}
+				@keyframes dash-out {
+					0% {
+						stroke-dashoffset: 0;
+					}
+					40% {
+						stroke-dashoffset: 240;
+					}
+					100% {
+						stroke-dashoffset: 240;
+					}
+				}
+
+				// All good burgers need filling!
+
+				.burger-icon {
+					position: absolute;
+					padding: 20px 16px;
+					height: 68px;
+					width: 68px;
+				}
+
+				.burger-container {
+					position: relative;
+					height: 28px;
+					width: 36px;
+				}
+
+				.burger-bun-top,
+				.burger-bun-bot,
+				.burger-filling {
+					position: absolute;
+					display: block;
+					height: 4px;
+					width: 36px;
+					border-radius: 2px;
+					background: $color;
+				}
+
+				.burger-bun-top {
+					top: 0;
+					transform-origin: 34px 2px;
+				}
+
+				.burger-bun-bot {
+					bottom: 0;
+					transform-origin: 34px 2px;
+				}
+				//.burger-filling {
+				//  @include transition(all,($animation/2.5),ease-in-//out);
+				//}
+				// relative parent is the button
+				.burger-filling {
+					top: 12px;
+				}
+
+				// burger ring container
+				.burger-ring {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 68px;
+					height: 68px;
+				}
+
+				.svg-ring {
+					width: 68px;
+					height: 68px;
+				}
+
+				// bun animations
+				.hamburglar.is-open {
+					.burger-bun-top {
+						animation: bun-top-out $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+					.burger-bun-bot {
+						animation: bun-bot-out $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+				}
+				.hamburglar.is-closed {
+					.burger-bun-top {
+						animation: bun-top-in $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+					.burger-bun-bot {
+						animation: bun-bot-in $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+				}
+
+				@keyframes bun-top-out {
+					0% {
+						left: 0;
+						top: 0;
+						transform: rotate(0deg);
+					}
+					20% {
+						left: 0;
+						top: 0;
+						transform: rotate(15deg);
+					}
+					80% {
+						left: -5px;
+						top: 0;
+						transform: rotate(-60deg);
+					}
+					100% {
+						left: -5px;
+						top: 1px;
+						transform: rotate(-45deg);
+					}
+				}
+
+				@keyframes bun-bot-out {
+					0% {
+						left: 0;
+						transform: rotate(0deg);
+					}
+					20% {
+						left: 0;
+						transform: rotate(-15deg);
+					}
+					80% {
+						left: -5px;
+						transform: rotate(60deg);
+					}
+					100% {
+						left: -5px;
+						transform: rotate(45deg);
+					}
+				}
+
+				@keyframes bun-top-in {
+					0% {
+						left: -5px;
+						bot: 0;
+						transform: rotate(-45deg);
+					}
+					20% {
+						left: -5px;
+						bot: 0;
+						transform: rotate(-60deg);
+					}
+					80% {
+						left: 0;
+						bot: 0;
+						transform: rotate(15deg);
+					}
+					100% {
+						left: 0;
+						bot: 1px;
+						transform: rotate(0deg);
+					}
+				}
+
+				@keyframes bun-bot-in {
+					0% {
+						left: -5px;
+						transform: rotate(45deg);
+					}
+					20% {
+						left: -5px;
+						bot: 0;
+						transform: rotate(60deg);
+					}
+					80% {
+						left: 0;
+						bot: 0;
+						transform: rotate(-15deg);
+					}
+					100% {
+						left: 0;
+						transform: rotate(0deg);
+					}
+				}
+
+				// burger filling
+				.hamburglar.is-open {
+					.burger-filling {
+						animation: burger-fill-out $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+				}
+
+				.hamburglar.is-closed {
+					.burger-filling {
+						animation: burger-fill-in $animation linear normal;
+						animation-fill-mode: forwards;
+					}
+				}
+
+				@keyframes burger-fill-in {
+					0% {
+						width: 0;
+						left: 36px;
+					}
+					40% {
+						width: 0;
+						left: 40px;
+					}
+					80% {
+						width: 36px;
+						left: -6px;
+					}
+					100% {
+						width: 36px;
+						left: 0px;
+					}
+				}
+
+				@keyframes burger-fill-out {
+					0% {
+						width: 36px;
+						left: 0px;
+					}
+					20% {
+						width: 42px;
+						left: -6px;
+					}
+
+					40% {
+						width: 0;
+						left: 40px;
+					}
+
+					100% {
+						width: 0;
+						left: 36px;
+					}
+				}
+			}
+			.mobile-nav {
+				display: block;
+				.mbl-nav-wrapper {
+					list-style: none;
+					background-color: $whiteoverlay;
+					width: 30%;
+					padding-top: 3.5rem;
+					text-align: center;
+					z-index: 5;
+					position: absolute;
+					right: 1rem;
+					top: 8rem;
+					border-radius: 5rem;
+					transition: opacity 0.7s ease-in-out;
+					display: none;
+					opacity: 0;
+					li {
+						padding: 2rem 0;
+						width: 100%;
+						a {
+							text-decoration: none;
+							color: $ash;
+							font-size: 2rem;
+							font: $font1;
+							font-weight: 600;
+						}
+					}
+				}
+				.mbl-nav-open {
+					display: block;
+					opacity: 1;
+				}
+			}
 		}
 	}
 	.about {
 		min-height: 120vh;
 		align-items: flex-start;
-		// padding: 1rem;
 		.container {
 			width: 100%;
 		}
@@ -707,11 +1056,11 @@ footer {
 	}
 
 	.menu {
-		height: 120vh;
+		min-height: 120vh;
 		.menu-content {
 			width: 90%;
 			min-width: 10rem;
-			height: 120vh;
+			min-height: 120vh;
 			padding-top: 2rem;
 			.menu-logo {
 				width: 13.5rem;
@@ -752,9 +1101,6 @@ footer {
 					}
 				}
 			}
-			// .menu-item-description {
-			// 	width: 70%;
-			// }
 		}
 	}
 
@@ -783,7 +1129,6 @@ footer {
 				.social {
 					width: 100%;
 					margin-top: 1rem;
-					//margin-right: 2.2rem;
 					font-size: 2rem;
 					.headline {
 						font-size: 2rem;
@@ -820,7 +1165,6 @@ footer {
 				height: 100%;
 				object-fit: cover;
 				object-position: bottom;
-				// float: left;
 			}
 			img:nth-child(2) {
 				display: none;

@@ -13,6 +13,11 @@ gsap.from('.nav-wrapper li', 0.5, {
 	},
 });
 
+gsap.from('.mobile-nav', 1, {
+	opacity: 0,
+	ease: 'Expo.easeInOut',
+});
+
 $(document).ready(function () {
 	'use strict';
 
@@ -100,4 +105,27 @@ sr.reveal('.animate-bottom-delay', {
 	duration: 1000,
 	distance: '3rem',
 	delay: 900,
+});
+
+$('document').ready(function () {
+	var trigger = $('#hamburger'),
+		isClosed = true;
+
+	trigger.click(function () {
+		burgerTime();
+	});
+
+	function burgerTime() {
+		if (isClosed == true) {
+			trigger.removeClass('is-open');
+			trigger.addClass('is-closed');
+			$('.mbl-nav-wrapper').removeClass('mbl-nav-open');
+			isClosed = false;
+		} else {
+			trigger.removeClass('is-closed');
+			trigger.addClass('is-open');
+			$('.mbl-nav-wrapper').addClass('mbl-nav-open');
+			isClosed = true;
+		}
+	}
 });
